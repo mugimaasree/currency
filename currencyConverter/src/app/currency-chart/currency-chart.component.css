@@ -1,0 +1,37 @@
+.input-box{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+    gap: 65px;
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    width: 150px;
+    border: none;
+    outline: none;
+    background-color: rgb(89, 166, 234);
+    font-size: 17px;
+}
+input{
+    border: none;
+    outline: none;
+    text-indent:8px ;
+    width: 220px;
+    background-color: rgba(152, 204, 249, 0.235);
+    border-radius:10px;
+
+}
+input:hover{
+    border: 2px solid rgb(6, 40, 70);
+}
+@media(max-width:600px){
+    #canvas{
+        height: 500px;
+        width: 500px;
+    }
+}

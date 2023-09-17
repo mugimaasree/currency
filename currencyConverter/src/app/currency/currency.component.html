@@ -1,0 +1,34 @@
+<div class="wrapper">
+    <header>Currency Converter</header>
+    <form>
+      <div class="amount">
+        <p>Enter Amount</p>
+        <input type="number" [(ngModel)]="amountToConvert" name="amount" placeholder="Enter Amount" (keydown.enter)="convertCurrency()">
+      </div>
+      <div class="drop-list">
+        <div class="from">
+          <p>From</p>
+          <div class="select-box">
+            <img [src]="countryToFlagUrlMapping[selectedFromCurrency]" alt="Flag" width="64">
+  
+            <select [(ngModel)]="selectedFromCurrency" name="fromCurrency" >
+              <option *ngFor="let rate of exchangeRates" [value]="rate.currency">{{ rate.currency }}</option>
+            </select>
+          </div>
+        </div>
+        <div class="to">
+          <p>To</p>
+          <div class="select-box">
+            <img [src]="countryToFlagUrlMapping[selectedToCurrency]" alt="Flag" width="64"> 
+            <select [(ngModel)]="selectedToCurrency" name="toCurrency">
+  
+              <option *ngFor="let rate of exchangeRates" [value]="rate.currency">{{ rate.currency }}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <button (click)="convertCurrency()">Convert</button>
+      <div class="exchange-rate">{{ exchangeRateText }}</div>
+    </form>
+</div>
+  

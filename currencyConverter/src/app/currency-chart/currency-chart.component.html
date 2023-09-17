@@ -1,0 +1,21 @@
+<!-- currency-chart.component.html -->
+<div class="con">
+<div class="input-box">
+<input type="date" [(ngModel)]="date">
+<!-- <div class="drop-list">
+  <div class="from">
+    <p>From</p>
+    <div class="select-box">
+      <select [(ngModel)]="baseCurrency" name="baseCurrency" (change)="updateChart()"> 
+        <option *ngFor="let rate of exchangeRates" [value]="rate.currency">{{ rate.currency }}</option>
+      </select>
+    </div>
+  </div> -->
+  
+  <button (click)="updateChart()">Update Chart</button>
+</div>
+  <div>
+    <canvas id="canvas" width="1500px" height="700"></canvas>
+  </div>
+ </div>
+
